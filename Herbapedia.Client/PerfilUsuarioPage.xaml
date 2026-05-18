@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.PerfilUsuarioPage"
+             Title="Perfil">
+    <VerticalStackLayout>
+        <Label 
+            Text="Mi perfil"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <StackLayout Padding="20" Spacing="10">
+           
+            
+            <Label>Nombre</Label>
+            <Entry x:Name="entry_Username"/>
+            <Label>Apellidos</Label>
+            <Entry x:Name="entry_Usersurname"/>
+            <Label>Fecha de nacimiento</Label>
+            <DatePicker x:Name="dp_Userbirthdate"/>
+            <Label>Nombre de usuario</Label>
+            <Entry  x:Name="entry_UserLoginName"/>
+            <Label>Número de teléfono</Label>
+            <Entry x:Name="entry_UserPhone"/>
+            <Label> Email</Label>
+            <Entry x:Name="entry_UserEmail"/>
+            <Label>Contraseña</Label>
+            <Entry x:Name="entry_UserPassword" IsPassword="True"></Entry>
+            <Button  Text="Guardar Cambios" Clicked="OnSaveClicked"/>
+        </StackLayout>
+        
+      
+    </VerticalStackLayout>
+    
+</ContentPage>

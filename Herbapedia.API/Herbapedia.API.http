@@ -1,0 +1,6 @@
+@Herbapedia.API_HostAddress = http://localhost:5208
+
+GET {{Herbapedia.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

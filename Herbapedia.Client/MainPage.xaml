@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="Herbapedia.Client.MainPage"
+			 x:Name="Herbapedia"
+             Title="Herbapedia">
+
+    <ScrollView>
+        <VerticalStackLayout
+			Padding="30,0"
+			Spacing="25"
+			Background="#ebebe4">
+            <Image
+				
+				Background="#ebebe4"
+				Source="plant.gif"
+				IsAnimationPlaying="True"
+				HeightRequest="200"
+				Aspect="AspectFit"
+				BackgroundColor="WhiteSmoke"
+				SemanticProperties.Description="Logo de Herbapedia" />
+
+
+            <Label
+				Text="HERBAPEDIA"
+				FontAttributes="Bold"
+				Style="{StaticResource Headline}"
+				SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+				Text="Bienvenidos a una nueva experiencia"
+				Style="{StaticResource SubHeadline}"
+				SemanticProperties.HeadingLevel="Level2"
+				SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <FlexLayout BackgroundColor="white"
+				WidthRequest="350"
+                        HeightRequest="370"
+				Wrap="Wrap"
+               
+				AlignContent="SpaceEvenly"
+                        Padding="5">
+                <Button 
+					ImageSource="login.png"
+					Text="Inicia sesión"
+                    Margin="5"
+					FontAttributes="Bold"
+					ContentLayout="Top, -10"
+					FontSize="20"
+					TextColor="White"
+					Padding="10,10,10,10"
+					HorizontalOptions="Center"
+					VerticalOptions="Start"
+					Background="#618f3d"
+					CornerRadius="0"
+					WidthRequest="150"
+					HeightRequest="150"
+					Clicked="OnLoginClicked"/>
+                <Button 
+					ImageSource="register.png"
+					Text="Crear usuario"
+                    Margin="5"
+					FontAttributes="Bold"
+					ContentLayout="Top, -10"
+					FontSize="20"
+					TextColor="White"
+					Padding="10,10,10,10"
+					HorizontalOptions="Center"
+					VerticalOptions="Start"
+					Background="#618f3d"
+					CornerRadius="0"
+					WidthRequest="150"
+					HeightRequest="150"
+					Clicked="OnRegisterClicked"/>
+
+                <Button 
+					ImageSource="entrar.png"
+					Text="Invitado"
+                    Margin="5"
+					FontAttributes="Bold"
+					ContentLayout="Top, -10"
+					FontSize="20"
+					TextColor="White"
+					Padding="10,10,10,10"
+					HorizontalOptions="Center"
+					VerticalOptions="Start"
+					Background="#618f3d"
+					CornerRadius="0"
+					WidthRequest="150"
+					HeightRequest="150"
+					Clicked="OnGuestClicked"/>
+                <Button 
+					ImageSource="dudas.png"
+					Text="FAQ"
+					Margin="5"
+					FontAttributes="Bold"
+					ContentLayout="Top, -10"
+					FontSize="20"
+					TextColor="White"
+					Padding="10,10,10,10"
+					HorizontalOptions="Center"
+					VerticalOptions="Start"
+					Background="#618f3d"
+					CornerRadius="0"
+					WidthRequest="150"
+					HeightRequest="150"
+					Clicked="OnDudasClicked"/>
+            </FlexLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

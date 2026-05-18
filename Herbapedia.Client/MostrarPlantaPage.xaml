@@ -1,0 +1,49 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.MostrarPlantaPage"
+             Title="Plantas">
+    <ScrollView>
+    <VerticalStackLayout Padding="10">
+        <Button Text="Crear Nueva Planta" Clicked="OnCreateClicked" CommandParameter=""
+                BackgroundColor="DarkGreen" TextColor="White"/>
+
+        <CollectionView x:Name="cv_Plantas"  SelectionMode="Single" SelectionChanged="cv_Plantas_SelectionChanged"> 
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal"></VisualState>
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border Stroke="Green"
+                            StrokeThickness="4"
+                            Padding="10"
+                            Margin="5"
+                            >
+                                <VerticalStackLayout Spacing="5">
+                                    <Label Text="{Binding PlantName}" FontSize="22" FontAttributes="Bold"
+                                   TextColor="DarkGreen"/>
+                            <Label Text="{Binding PlantType.PlantTypeName}" FontSize="18" TextColor="Black"/>
+                            <Label Text="{Binding PlantDescription}" FontSize="16" TextColor="Black"/>
+                            <Label Text="{Binding PlantTips}" FontSize="16" TextColor="Black"/>
+
+                                <Button Text="Editar Planta" Clicked="OnEditClicked"
+                                    CommandParameter="{Binding PlantId}"
+                                    BackgroundColor="LightGreen" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

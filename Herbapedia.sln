@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herbapedia.API", "Herbapedia.API\Herbapedia.API.csproj", "{1B3DB58C-3DD8-4685-BF43-B95CA2723EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herbapedia.Model", "Herbapedia.Model\Herbapedia.Model.csproj", "{7BE8342D-9E94-424F-8A7B-A4E68D7C1EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herbapedia.Client", "Herbapedia.Client\Herbapedia.Client.csproj", "{8453854C-7684-4FBF-90B2-03A1EA95CB1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herbapedia.Util", "Herbapedia.Util\Herbapedia.Util.csproj", "{C77CDAC2-D8A7-486D-949C-61794D0B0D5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B3DB58C-3DD8-4685-BF43-B95CA2723EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3DB58C-3DD8-4685-BF43-B95CA2723EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3DB58C-3DD8-4685-BF43-B95CA2723EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3DB58C-3DD8-4685-BF43-B95CA2723EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE8342D-9E94-424F-8A7B-A4E68D7C1EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE8342D-9E94-424F-8A7B-A4E68D7C1EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE8342D-9E94-424F-8A7B-A4E68D7C1EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE8342D-9E94-424F-8A7B-A4E68D7C1EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8453854C-7684-4FBF-90B2-03A1EA95CB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8453854C-7684-4FBF-90B2-03A1EA95CB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8453854C-7684-4FBF-90B2-03A1EA95CB1B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8453854C-7684-4FBF-90B2-03A1EA95CB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8453854C-7684-4FBF-90B2-03A1EA95CB1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77CDAC2-D8A7-486D-949C-61794D0B0D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77CDAC2-D8A7-486D-949C-61794D0B0D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77CDAC2-D8A7-486D-949C-61794D0B0D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77CDAC2-D8A7-486D-949C-61794D0B0D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58F3422E-5DCD-4FBE-8F21-C979B2E20F87}
+	EndGlobalSection
+EndGlobal

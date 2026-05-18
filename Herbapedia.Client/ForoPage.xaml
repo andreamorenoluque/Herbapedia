@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.ForoPage"
+             Title="Foro">
+    <ScrollView>
+    <VerticalStackLayout Padding="10">
+        <Button Text="Nueva publicación" Clicked="OnCreatePostClicked"/>
+        <Label Text="Foro de Herbapedia" FontSize="24" HorizontalOptions="Center"/>
+        <CollectionView x:Name="cv_Posts"  SelectionMode="Single" SelectionChanged="cv_Posts_SelectionChanged" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border Stroke="Green"
+                                StrokeThickness="4"
+                                Padding="10"
+                                Margin="5"
+                                >
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal"></VisualState>
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="LightGray"></Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <VerticalStackLayout Spacing="5">
+                            
+                            <Label Text="{Binding PostCreator.UserLoginName}" FontAttributes="Bold" x:Name="Creador"/>
+                            <Label Text="{Binding PostDate, StringFormat='{0:dd/MM/yyyy HH:mm}'}" x:Name="FechaCreadorPost"/>
+                            <Label Text="{Binding PostContent}"  x:Name="Contenido"/>
+
+                            <Button Text="Editar Publicación" Clicked="OnEditClicked"
+                                        CommandParameter="{Binding PostId}"
+                                        BackgroundColor="LightGreen" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+       
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

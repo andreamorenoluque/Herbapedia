@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.ChatMessagePage"
+             Title="ChatMessagePage">
+    <Grid>
+        <ScrollView>
+    <VerticalStackLayout>
+        <CollectionView x:Name="cv_Lista_Mensajes" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Border  Margin="10" Padding="20" HorizontalOptions="End"
+                                Background="#CEE4C6" IsVisible="{Binding IsReceiver}" Stroke="#B4B4B4">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10,10,10,10" />
+                            </Border.StrokeShape>
+                            <Label LineBreakMode="WordWrap" Text="{Binding MessageContent}" />
+                        </Border>
+                        <Border Margin="10" Padding="20" HorizontalOptions="Start"
+                                Background="White" IsVisible="{Binding IsTransmitter}" Stroke="#B4B4B4">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10,10,10,10" />
+                            </Border.StrokeShape>
+                            <Label LineBreakMode="WordWrap" Text="{Binding MessageContent}" />
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+ 
+        <VerticalStackLayout VerticalOptions="End" Background="White">
+            <Editor x:Name="entry_Mensaje" AutoSize="TextChanges"  Placeholder="Escribe tu mensaje..."/>
+            <Button Text="Enviar" Clicked="SendMessageCommand" HorizontalOptions="End" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

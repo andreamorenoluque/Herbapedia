@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Herbapedia.Client.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Herbapedia.Client"
+    Title="Herbapedia.Client">
+
+    <TabBar>
+        <ShellContent Route="MainPage" Title="Inicio" Icon="home.png"
+                      ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Route="ForoPage" Title="Foro" Icon="foro.png"
+                      ContentTemplate="{DataTemplate local:ForoPage}" />
+        <ShellContent Route="MostrarPlantaPage" Title="Plantas" Icon="plant3.png"
+                      ContentTemplate="{DataTemplate local:MostrarPlantaPage}" />
+        <ShellContent x:Name="ChatPage" Route="ChatPage" Title="Chat" Icon="post.png"
+                      ContentTemplate="{DataTemplate local:ChatPage}" />
+        <ShellContent x:Name="PerfilUsuarioPage" Route="PerfilUsuarioPage" Title="Perfil" Icon="perfil.png"
+                      ContentTemplate="{DataTemplate local:PerfilUsuarioPage}" />
+    </TabBar>
+
+</Shell>

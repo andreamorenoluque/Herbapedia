@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Integración",
+    "Projects": [
+      {
+        "Path": "Herbapedia.API\\Herbapedia.API.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "Herbapedia.Client\\Herbapedia.Client.csproj",
+        "Action": "Start",
+        "DebugTarget": "Pixel 7 - API 35 (Android 15.0 - API 35)"
+      }
+    ]
+  }
+]

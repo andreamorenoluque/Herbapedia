@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.NewPostPage"
+             Title="Nueva publicación">
+    <StackLayout>
+        <Label Text="Foro de Herbapedia" FontSize="24" HorizontalOptions="Center"/>
+        <Label Text="Nueva publicacion"
+               FontSize="20"
+               FontAttributes="Bold"
+               Margin="0,20,0,0" />
+        <Editor Placeholder="Escribe tu publicación..."
+                FontSize="16"
+                TextColor="Black"
+                AutoSize="TextChanges"
+                x:Name="NewPostEntry"
+                Margin="0,10,0,0" />
+
+        
+        <Button Text="Enviar" Clicked="OnEnviarClicked"/>
+       
+    </StackLayout>
+</ContentPage>

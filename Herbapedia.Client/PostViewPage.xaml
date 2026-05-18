@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.PostViewPage"
+             Title="Publicación">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <Label 
+                 Text="Publicación"
+                 FontSize="25"
+                 FontAttributes="Bold"
+                 VerticalOptions="Center" 
+                 HorizontalOptions="Center" />  
+            <Label Text="Contenido"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0" /> 
+            <Label Text="{Binding Post.PostContent}" FontSize="16" TextColor="Black"
+                                                           x:Name="Contenido"
+                                                           Margin="0,10,0,0" />
+
+            <Label Text="Autor"
+                     FontSize="20"
+                     FontAttributes="Bold"
+                     Margin="0,20,0,0" />
+            <Label Text="{Binding Post.PostCreator.UserName}" FontSize="16" TextColor="Black"
+                   x:Name="Creador"
+                   Margin="0,10,0,0" />
+
+            <Label Text="Fecha de publicación"
+             FontSize="20"
+             FontAttributes="Bold"
+             Margin="0,20,0,0" />
+
+            <DatePicker  FontSize="18" TextColor="Black"
+                    x:Name="Fecha"/>
+
+            <!-- Apartado de comentarios -->
+            <Label Text="Comentarios"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0" />
+
+            <Editor x:Name="commentEntry" AutoSize="TextChanges" Placeholder="Escribe tu comentario aquí..." ></Editor>
+
+           
+           <Button Text="Enviar comentario"
+              Clicked="OnCommentClicked"
+              BackgroundColor="Green"
+              TextColor="White"
+              Margin="0,0,0,0" 
+              IsEnabled="{Binding IsUserAuthenticated}"
+              HorizontalOptions="End"/>
+
+            <CollectionView x:Name="cv_Comments">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Stroke="Gray" StrokeThickness="1" Padding="10" Margin="5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding CommentCreator.UserName}" 
+                           FontSize="14" 
+                           FontAttributes="Bold" 
+                           TextColor="DarkBlue"/>
+                                <Label Text="{Binding CommentContent}" 
+                           FontSize="16"/>
+                                <Label Text="{Binding CommentDate, StringFormat='{0:dd/MM/yyyy HH:mm}'}" 
+                           FontSize="12" 
+                           TextColor="Gray"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Herbapedia.Client.PlantPage"
+             Title="Nueva planta">
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
+            <SearchBar Placeholder="Search items..." />
+            <!-- Nombre de la planta -->
+            <Entry Placeholder="Nombre de la planta"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,0" 
+                   x:Name="NamePlantEntry"/>
+
+            
+
+            <!-- Descripción de la planta -->
+            <Label Text="Descripción"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="0,20,0,0" />
+            <Editor Placeholder="Descripción detallada de la planta, incluyendo características, origen y utilidad."
+                   FontSize="16"
+                   TextColor="Black"
+                    AutoSize="TextChanges"
+                   x:Name="DescriptionPlantEntry"
+                   Margin="0,10,0,0" 
+                   />
+
+            <!-- Consejos de cuidado -->
+            <Label Text="Consejos"
+                     FontSize="20"
+                     FontAttributes="Bold"
+                     Margin="0,20,0,0" />
+            <Editor Placeholder="Consejos para el cuidado: riego, luz solar, tipo de suelo y otros factores importantes."
+                   FontSize="16"
+                    AutoSize="TextChanges"
+                   TextColor="Black"
+                   x:Name="TipsEntry"
+                   Margin="0,10,0,0" />
+            
+            <!--Elegir tip de planta-->
+            <Label Text="Tipo de planta"
+                     FontSize="20"
+                     FontAttributes="Bold"
+                     Margin="0,20,0,0" />
+            
+            <Picker x:Name="plantTypePicker" Title="Selecciona un tipo" SelectedIndexChanged="OnPickerSelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Hortaliza</x:String>
+                    <x:String>Aromaticas</x:String>
+                    <x:String>Frutal</x:String>
+                    <x:String>Planta</x:String>
+                   
+                </Picker.Items>
+            </Picker>
+
+    
+            <Button Text="Guardar Planta"
+                    Clicked="OnSavePlantClicked"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Margin="0,10,0,0"/>
+        
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
